@@ -12,6 +12,6 @@ In task 2 I paired the product ID with each customer ID who purchased that item.
 
 ### Task 3
 
-In task 3 I created an array/csv that shows Id, First Name, Last Name, and total amount (euros) spent.
+In task 3 I created an array/csv that shows Id, First Name, Last Name, and total amount (euros) spent in descending order.
 
 Basic javascript/node app. Example (incomplete)code for client-side download via website/browser available in comments.
