@@ -5,7 +5,6 @@ My answer to the coding challenge. To run this project please type: node app.js 
 ### Task 1
 
 In task 1 I assigned the prices of products to variables, and found the total. I then assigned these to the correct Order ID to create a new array/csv.
-Right now the `orders.csv` doesn't have total order cost information.
 
 ### Task 2
 
