@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "convert-csv-to-json": "^1.3.3",
+    "csv-parse": "^5.3.0",
+    "csvtojson": "^2.0.10",
+    "jquery-csv": "^1.0.21",
+    "json2csv": "^5.0.7"
+  },
+  "name": "devops-interview",
+  "description": "Choose whatever language you're most comfortable with to solve these problems.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmandaKankkonen/devops-interview.git"
+  },
+  "author": "Amanda Kankkonen",
+  "license": "ISC",
+  "homepage": "https://github.com/AmandaKankkonen/devops-interview#readme"
+}
