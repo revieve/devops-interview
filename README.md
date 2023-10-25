@@ -1,3 +1,6 @@
+# Results
+I have been studying Python for a while now and since it is a really powerful tool and easier to use when it comes to lists and financial information, I think it is best suitable for these tasks. Maybe this was a JS test, but for me, the easiest way to resolve a situation is to think outside the box. I hope everything that was asked of me was answered when reviewing the code. Thank you.
+
 # Overview
 
 Choose whatever language you're most comfortable with to solve these problems.
