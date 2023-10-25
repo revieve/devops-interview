@@ -1,5 +1,5 @@
 # Results
-I have been studying for a while now Python and since it is a really powerful tool and easier to use when it comes to lists and financial information I think it is best suitable for these tasks. Maybe this was a JS test but for me the easiest way to resolve a situation is thinking outside the box. I hope everything that was asked of me was answered when reviewing the code.
+I have been studying for a while now Python and since it is a really powerful tool and easier to use when it comes to lists and financial information I think it is best suitable for these tasks. Maybe this was a JS test, but for me, the easiest way to resolve a situation is thinking outside the box. I hope everything that was asked of me was answered when reviewing the code.
 Thank you.
 
 # Overview
