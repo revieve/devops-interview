@@ -1,6 +1,6 @@
 # Overview
 
-Choose whatever language you're most comfortable with to solve these problems.
+Choose whatever language you’re most comfortable with to solve these problems. The tasks are designed to test your ability to work with data and scripts and showcase relevant skills for the DevOps role at Revieve.
 
 # Exercise
 
@@ -42,3 +42,35 @@ To evaluate our customers, we need a `customer_ranking.csv` containing the follo
 * `firstname` customer first name
 * `lastname` customer last name
 * `total_euros` total euros this customer has spent on products
+
+### Additional Requirements
+
+- Automation: Create a script or configuration to automate the execution of these data processing tasks. Consider using a task runner or a simple CI/CD pipeline setup (e.g., GitHub Actions) to automate the generation of the CSV files whenever new data is added.
+- Documentation: Provide clear and concise documentation on how to run your solution, including any setup steps and dependencies.
+
+### Optional Requirements
+
+For those who wish to go above and beyond, consider implementing one or more of the following optional features:
+
+1. Unit Testing:
+- Write unit tests for your data processing scripts using a testing framework of your choice.
+- Include the tests in your GitHub Actions workflow to run automatically on each push and pull request.
+2. Error Handling and Logging:
+- Implement robust error handling and logging for your scripts.
+- Use a logging library to capture and store logs.
+3. Code Quality:
+- Ensure your code follows best practices for code quality and style.
+- Use tools like flake8, pylint, or black to lint and format your code.
+4. Performance Optimization:
+- Optimize your scripts for better performance, especially if handling large datasets.
+- Provide a brief explanation of the optimizations you implemented.
+5. Dockerization:
+- Create a Dockerfile to containerize your scripts.
+- Update the GitHub Actions workflow to use the Docker container for running the scripts.
+
+### Submission Instructions
+
+1. Fork this repository to your own GitHub account.
+2. Implement your solutions.
+3. Create a pull request in your forked repository with your solution.
+4. Ensure your pull request includes clear instructions and explanations of your approach.
