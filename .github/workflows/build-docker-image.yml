@@ -1,0 +1,26 @@
+name: Create and publish CSV parser application
+on:
+  push:
+    tags: ['github-actions-build-app-*']
+jobs:
+  build-and-push-dev:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{  vars.DOCKER_REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{  vars.DOCKER_REGISTRY }}/${{ github.repository }}-${{ vars.PACKAGE_NAME }}:development, ${{  vars.DOCKER_REGISTRY }}/${{ github.repository }}-${{ vars.PACKAGE_NAME }}:${{ github.ref_name }}-development
+          file: docker/Dockerfile

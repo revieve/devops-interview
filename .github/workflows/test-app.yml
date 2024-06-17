@@ -1,0 +1,55 @@
+name: Format, lint, test application
+on:
+  push:
+    tags: ['github-actions-test-app-*']
+jobs:
+  format:
+    permissions:
+      packages: read
+    runs-on: ubuntu-latest
+    container:
+      image: ${{ vars.DOCKER_REGISTRY }}/${{ github.repository }}-${{ vars.PACKAGE_NAME }}:development
+    defaults:
+      run:
+        working-directory: /usr/csv-parser
+    steps:
+      - uses: actions/cache@v4
+        with:
+          key: /usr/csv-parser
+          path: /usr/csv-parser
+      - name: Run fmt script
+        run: yarn fmt
+  lint:
+    needs: [ format ]
+    permissions:
+      packages: read
+    runs-on: ubuntu-latest
+    container:
+      image: ${{ vars.DOCKER_REGISTRY }}/${{ github.repository }}-${{ vars.PACKAGE_NAME }}:development
+    defaults:
+      run:
+        working-directory: /usr/csv-parser
+    steps:
+      - uses: actions/cache@v4
+        with:
+          key: /usr/csv-parser
+          path: /usr/csv-parser
+      - name: Run lint script
+        run: yarn lint
+  test:
+    needs: [ format ]
+    permissions:
+      packages: read
+    runs-on: ubuntu-latest
+    container:
+      image: ${{ vars.DOCKER_REGISTRY }}/${{ github.repository }}-${{ vars.PACKAGE_NAME }}:development
+    defaults:
+      run:
+        working-directory: /usr/csv-parser
+    steps:
+      - uses: actions/cache@v4
+        with:
+          key: /usr/csv-parser
+          path: /usr/csv-parser
+      - name: Run test script
+        run: yarn test
