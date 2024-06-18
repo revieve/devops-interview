@@ -2,6 +2,7 @@ import { expect } from 'chai';
 import { generateCustomerRanking } from '../scripts/customers.js';
 import fs from 'fs';
 
+// simple test to generate the customer ranking correctly based on the expected data
 describe('Customer Ranking', () => {
   it('should generate customer ranking correctly', async () => {
     const ordersPath = './test/data/orders.csv';

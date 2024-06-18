@@ -5,6 +5,25 @@
 
 This document provides instructions on how to set up and run the script for this Node.js project.
 
+## Implementation
+
+1. This is a simple project using Node.js to process and transform a CSV data based on the requirements.
+2. This project csv-parser, csv-writer, and file stream library for the main logic.
+3. As for additional task, a simple unit test is also being added using mocha chai testing framework that are quite popular and easy to use.
+4. On the logger feature, I am using winston logging library because it supports different logging levels, transports, and formats.
+5. Lastly, on the linter library, I am using the eslint and prettier library to ensure code quality and adherence to best practices.
+
+## Code Optimization
+
+In the solution code, there are also some code technique being used for a better performance and to ensure that we can handle a large datasets:
+
+1. Stream Processing:
+   * The use of fs.createReadStream and csv-parser allows processing large files in chunks rather than loading the entire file into memory.
+2. Asynchronous Processing:
+   * The parseCsv function is asynchronous, which helps in processing files without blocking the event loop, enhancing performance.
+3. Batch Processing:
+   * Writing all processed data at once using createObjectCsvWriter minimizes the number of I/O operations, which is more efficient than writing data one record at a time.
+
 ## Prerequisites
 
 Ensure you have the following installed on your system:
@@ -16,13 +35,12 @@ Ensure you have the following installed on your system:
 
 1. **Clone the repository** (if you haven't already):
     \`\`\`sh
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/aditioagungnugroho/devops-interview.git
     \`\`\`
 
 2. **Navigate to the project directory**:
     \`\`\`sh
-    cd path/to/extracted/project
+    cd devops-interview
     \`\`\`
 
 3. **Install the dependencies**:
