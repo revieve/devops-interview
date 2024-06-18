@@ -31,8 +31,8 @@ jobs:
     - name: Build Docker image
       run: docker build -t my-node-app .
 
-    - name: Run Docker container in detached mode
-      run: docker run -d --name data-processing-container my-node-app
+    - name: Run Docker container in detached mode with custom command
+      run: docker run -d --name data-processing-container my-node-app tail -f /dev/null
 
     - name: Check container status
       run: docker ps -a
