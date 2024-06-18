@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-      - '**'  # Trigger the workflow for all branches
+      - '**'
   pull_request:
     branches:
       - main
-      - '**'  # Trigger the workflow for all branches
+      - '**'
   workflow_dispatch:
 
 jobs:
@@ -32,7 +32,10 @@ jobs:
       run: docker build -t my-node-app .
 
     - name: Run Docker container
-      run: docker run --name data-processing-container my-node-app
+      run: docker run -d --name data-processing-container my-node-app
+
+    - name: Wait for the container to be ready
+      run: sleep 10
 
     - name: Run tests
       run: docker exec data-processing-container npm test
