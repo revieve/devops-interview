@@ -45,16 +45,5 @@ jobs:
     - name: Run tests
       run: docker exec data-processing-container npm test
 
-    - name: Commit and push changes
-      if: success()
-      run: |
-        git config --global user.name 'github-actions'
-        git config --global user.email 'github-actions@github.com'
-        git add -A
-        git commit -m 'Automated CSV generation'
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
     - name: Cleanup
       run: docker rm -f data-processing-container
